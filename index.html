@@ -168,7 +168,7 @@ function renderBoard(brief, elements) {
 
   elements.forEach(function(el, i) {
     var prompt = el.image_prompt || el.element_name;
-    var imgUrl = 'https://image.pollinations.ai/prompt/' + encodeURIComponent(prompt) + '?width=600&height=440&nologo=true&seed=' + (i + 1);
+    var imgUrl = 'https://image.pollinations.ai/prompt/' + encodeURIComponent(prompt) + '?width=600&height=440&nologo=true&seed=' + Math.floor(Math.random() * 9999);
     var fallback = 'https://picsum.photos/seed/' + (i * 17) + '/600/440';
 
     var card = document.createElement('div');
