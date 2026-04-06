@@ -170,7 +170,6 @@ function renderBoard(brief, elements) {
     var prompt = el.image_prompt || el.element_name;
     var keywords = el.element_name.toLowerCase().replace(/\s+/g, ',');
 var imgUrl = 'https://source.unsplash.com/600x440/?' + keywords;
-var fallback = 'https://picsum.photos/seed/' + encodeURIComponent(el.element_name + brief) + '/600/440';
     var fallback = 'https://picsum.photos/seed/' + (i * 17) + '/600/440';
 
     var card = document.createElement('div');
